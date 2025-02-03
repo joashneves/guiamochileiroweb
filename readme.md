@@ -8,4 +8,4 @@ Aqui VAMOS(sim no plural) lhe mostrar tudo que voce precisa saber da web, tudo q
 
 ### O que falta ser feito
 O que falta ser feito, são assunto que ainda não estão catalogados no livro do mochileiro da web, então, se voce esta lendo algum desse assunto, pode ser que ele não esteja completo, ou ainda esteja sendo escrito
-[Clique aqui](tarefas)
+[Clique aqui](./tarefas.md)
