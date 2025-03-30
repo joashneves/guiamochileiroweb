@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"46b76e726c6d3da8","x":-245,"y":168,"width":250,"height":60,"type":"text","text":"Aplicação"},
+		{"id":"30251d1b40398a71","x":-245,"y":282,"width":250,"height":60,"type":"text","text":"Colaboração"},
+		{"id":"96b529f42c927945","x":-245,"y":40,"width":250,"height":60,"type":"text","text":"Introdução do projeto"},
+		{"id":"44a37c75dbb58788","x":-375,"y":424,"width":250,"height":60,"color":"6","type":"text","text":"Git"},
+		{"id":"3286b0dda242cfcf","x":-59,"y":424,"width":250,"height":60,"type":"text","text":"Github"},
+		{"id":"855bd6c043d7ce19","x":76,"y":73,"width":250,"height":60,"type":"text","text":"Apresentação"},
+		{"id":"16bb3337432bba4a","x":255,"y":261,"width":250,"height":60,"type":"text","text":"Sumario"},
+		{"id":"e5359fb1d0a0a9dd","x":602,"y":146,"width":250,"height":60,"type":"text","text":"IDE/Editor"}
+	],
+	"edges":[
+		{"id":"2541e7fd44d43723","fromNode":"96b529f42c927945","fromSide":"bottom","toNode":"46b76e726c6d3da8","toSide":"top"},
+		{"id":"619549107bd785af","fromNode":"46b76e726c6d3da8","fromSide":"bottom","toNode":"30251d1b40398a71","toSide":"top"},
+		{"id":"315f74644b974af7","fromNode":"30251d1b40398a71","fromSide":"bottom","toNode":"44a37c75dbb58788","toSide":"top"},
+		{"id":"f7b1f8767ac87403","fromNode":"44a37c75dbb58788","fromSide":"right","toNode":"3286b0dda242cfcf","toSide":"left"},
+		{"id":"84fb99ab69a5e857","fromNode":"3286b0dda242cfcf","fromSide":"left","toNode":"44a37c75dbb58788","toSide":"right"},
+		{"id":"b2bef1793c5ae807","fromNode":"30251d1b40398a71","fromSide":"bottom","toNode":"3286b0dda242cfcf","toSide":"top"},
+		{"id":"c2bd39ced788604e","fromNode":"3286b0dda242cfcf","fromSide":"top","toNode":"30251d1b40398a71","toSide":"right"},
+		{"id":"7a0b2ecacc84cb5c","fromNode":"44a37c75dbb58788","fromSide":"top","toNode":"30251d1b40398a71","toSide":"left"},
+		{"id":"6969045392f5bbed","fromNode":"96b529f42c927945","fromSide":"right","toNode":"855bd6c043d7ce19","toSide":"left"},
+		{"id":"ec0c7dcfeda76abf","fromNode":"855bd6c043d7ce19","fromSide":"bottom","toNode":"16bb3337432bba4a","toSide":"top"},
+		{"id":"314445b43611b3a9","fromNode":"855bd6c043d7ce19","fromSide":"right","toNode":"e5359fb1d0a0a9dd","toSide":"left"}
+	]
+}
