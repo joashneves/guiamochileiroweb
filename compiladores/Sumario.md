@@ -1,3 +1,0 @@
-- [Introdução](./introdução)
-- [linguagens](./linguagens)
-- 

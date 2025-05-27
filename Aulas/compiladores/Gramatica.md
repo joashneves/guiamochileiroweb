@@ -1,3 +1,4 @@
+#aula #compiladores 
 A gramatica formal é usada para definir a estrutura das linguagens de programação. Ela descreve como sequencia de simbolos pode ser gerada de forma valida. A gramatica é composta por quatro elementos principais: V,T,P,S
 
 Uma Gramatica é representada como um conjunto G = (V, T, P, S) onde:
