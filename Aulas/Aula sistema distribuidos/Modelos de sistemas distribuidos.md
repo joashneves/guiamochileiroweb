@@ -70,6 +70,10 @@ Arquiteturas baseadas em ojetos e orienteadas a serviços
 Arquiteturas centradas em dados;
 - O sistema distribuido é visto como uma coleção de recursos gerenciados individualmente pelo compentes. Os recursos podem ser adicionados, removidos, recuperados e modificados por aplicação(remotas)
 - Componentes se comunicam atraves de um repositorio comum como se fosse uma "caixa postal"
-
+### Baseada em eventos
+Sistemas publish-subscribe
+- Componentes publicam eventos e certificam que somente os subscreveram recebem estes eventos
+- Fracamente acoplados: Não invocam explicitamente um ao outro.
+- Nesse modelo, os processos se comunicam pela propagação de eventos e tambem podem transportar dados. Caracteriza-se como um sistema subescrever/publicar, isto é, clientes publicam interesse em determinado evento realizando uma inscrição enviada parau ma entidade intermediaria denominada broker(middleware)
 
 ---
