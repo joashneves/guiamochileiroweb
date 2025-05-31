@@ -1,3 +1,6 @@
+---
+dg-publish: true
+---
 #javascript 
 # Introdução
 Eventos são o que acontecem por baixo dos panos de um site front-end, um evento javascript é um script que são executados quano alguma ação pre programada é acionada no navegador, seja ela dentro da pagina :

@@ -1,3 +1,6 @@
+---
+dg-publish: true
+---
 #javascript 
 Se o DOM (Document Object Model) mexe diretamente com o HTML da pagina, o BOM (Browser Object Model) mexe diretamente com o Browser(o navegador), muitas vezes é referido como métodos e propriedades da lista técnica.
 

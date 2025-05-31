@@ -30,5 +30,22 @@ Não sei se já existe algo assim no mercado, mas acho que podemos dar um puxão
 
 # Linkedin de projeto publico
 
-## Problema
+## Problemas
 Não saber como encontrar projetos comunitários, não saber como montar um projeto, não saber encontrar projetos
+
+### Topicos de problemas
+- Falta de projetos reais para participar voluntariamente
+- Falta de reconhecimento formal do trabalho voluntário
+- Dificuldade para encontrar equipes organizadas para colaborar
+- Falta de mentoria ou acompanhamento durante o projeto
+- Dificuldade para conciliar com trabalho ou estudos
+- Pouca transparência sobre o impacto do meu trabalho
+- Insegurança sobre a validade do projeto para meu portfólio/currículo
+- Falta de ajuda financeira ou bolsa para quem se dedica
+- Medo de perder tempo com projetos mal estruturados
+- Barreiras para acessar redes profissionais relevantes
+
+
+## Solução
+- Plataforma
+- 
