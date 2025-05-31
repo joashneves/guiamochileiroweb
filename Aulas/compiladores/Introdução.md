@@ -1,3 +1,6 @@
+---
+dg-publish: true
+---
 Comunicação entre pessoas - A linguagem é o meio mais eficaz
 Na programação de computadores - A linguagem de programação é o meio de comunicação entre o programador e o computador
 Função da linguagem de programação - conecta o pensamento humano com a precisão necessária para o processamento da maquina
