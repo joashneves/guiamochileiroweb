@@ -1,3 +1,6 @@
+---
+dg-publish: true
+---
 ## Alfabeto 
 **Importancia das cadeias de caracteres:**
 - Fundamentais para diversas aplicações em ciencias da computação

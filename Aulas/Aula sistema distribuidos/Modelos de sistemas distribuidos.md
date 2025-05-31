@@ -1,3 +1,6 @@
+---
+dg-publish: true
+---
 #aula #sistemas 
 - Sistemas distribuidos são conjuntos de componentes autonomos (processadores, serivodres, dispositivos) que trabalham juntos
 ---
