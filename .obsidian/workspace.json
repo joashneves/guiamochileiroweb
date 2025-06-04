@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Aulas/Aula sistema distribuidos/Sistema distribuidos - Atividados.md",
+                "file": "Aulas/Aula sistema distribuidos/Modelos de sistemas distribuidos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sistema distribuidos - Atividados"
+              "title": "Modelos de sistemas distribuidos"
             }
           },
           {
@@ -210,9 +210,9 @@
   },
   "active": "b6f9d499686a8e82",
   "lastOpenFiles": [
-    "Aulas/Aula sistema distribuidos/Modelos de sistemas distribuidos.md",
-    "Aulas/Aula sistema distribuidos/Sistema distribuidos - Atividados.md",
     "Aulas/Aula sistema distribuidos/Sistema distribuidos.md",
+    "Aulas/Aula sistema distribuidos/Sistema distribuidos - Atividados.md",
+    "Aulas/Aula sistema distribuidos/Modelos de sistemas distribuidos.md",
     "Sw/Ataque.md",
     "Sw/Ideias.md",
     "Sw/Etapas.md",

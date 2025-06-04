@@ -1,3 +1,6 @@
+---
+dg-publish: true
+---
 1 - Defina o que é um sistema distribuido
 2 - Quais são as principais caracteristicas do hardware e do software em um sistema distribuido?
 3 - Explique o desafio da inexistencia de um relogio global em sistemas distribuidos.
