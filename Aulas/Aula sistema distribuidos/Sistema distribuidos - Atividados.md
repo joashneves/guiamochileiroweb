@@ -27,3 +27,4 @@
 28 - Como arquiteturas centradas em dados funcionam? de um exemplo pratico
 29 - Explique o modelo publish-subscribe e suas vantagens
 30 - Qual a diferença entre arquiteturas em camadas e arquiteturas baseadas em objetos
+

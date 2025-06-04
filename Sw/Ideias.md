@@ -28,24 +28,3 @@ Além disso, o app pode evoluir com funcionalidades como:
 	•	Análise de perfil e desempenho, com dicas personalizadas de crescimento como no Linkedin
 Não sei se já existe algo assim no mercado, mas acho que podemos dar um puxão a mais nessa ideia pra ser diferenciado e inovadora
 
-# Linkedin de projeto publico
-
-## Problemas
-Não saber como encontrar projetos comunitários, não saber como montar um projeto, não saber encontrar projetos
-
-### Topicos de problemas
-- Falta de projetos reais para participar voluntariamente
-- Falta de reconhecimento formal do trabalho voluntário
-- Dificuldade para encontrar equipes organizadas para colaborar
-- Falta de mentoria ou acompanhamento durante o projeto
-- Dificuldade para conciliar com trabalho ou estudos
-- Pouca transparência sobre o impacto do meu trabalho
-- Insegurança sobre a validade do projeto para meu portfólio/currículo
-- Falta de ajuda financeira ou bolsa para quem se dedica
-- Medo de perder tempo com projetos mal estruturados
-- Barreiras para acessar redes profissionais relevantes
-
-
-## Solução
-- Plataforma
-- 

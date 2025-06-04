@@ -10,5 +10,15 @@ Perguntando por form, pessoas pessoalmente, e que seja um grande numero de pesso
 
 # Pitch
 
+- Open Pitch
+- Problema
+- Solução
+- Mercado
+- Modelo de Negocio
+- Concorrencia
+- Equipe
+- Proximos passos
+- Call to Action
+
 
 > Apaixone-se pelo problema não pela solução
