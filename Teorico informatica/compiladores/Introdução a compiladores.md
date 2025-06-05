@@ -29,3 +29,8 @@ STORE(01) : Transfere o conteudo de um registrador para uma posição de memoria
 ADD(10): Soma o conteudo de dois registradores e armazena o resultado em um terceiro
 
 BZero(11): Altera o contador de programa para um endereço especifico se o registrador for zero
+
+Topicos :
+[[linguagens]]
+[[Analisador lexico]]
+[[Gramatica]]

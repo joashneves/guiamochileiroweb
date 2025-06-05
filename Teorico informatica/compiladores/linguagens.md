@@ -68,4 +68,3 @@ _Notação : L_
 - O conjunto vazio e o conjunto formação pela palavra vazia são linguagens sobre : Σ : logo, 0 /= {e}
 - o conjunto de palíndromos (palavras que tem a mesma leitura da esquerda para direita e vice-versa) sobre Σ é um exemplo de linguagem infinita
 - > E, a, b, aa, bb, aaa, aba, bab, bbb, aaaa, abba
-- 
