@@ -32,6 +32,7 @@ BZero(11): Altera o contador de programa para um endereço especifico se o regis
 
 Topicos :
 [[linguagens]]
-[[Analisador lexico]]
+
 [[Gramatica]]
+
 [[Analise sintática - compiladores]]

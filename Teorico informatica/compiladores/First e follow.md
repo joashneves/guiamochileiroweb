@@ -183,8 +183,8 @@ FIRST(T’) = { *, Є }
 FIRST(F) = { ( , id }  
   
 FOLLOW Set
-FOLLOW(E)  = { $ , ) }  // Note  ')' is there because of rule 3 (the propagation of FOLLOW(E) through the non-terminal E’)  
-FOLLOW(E’) = FOLLOW(E) = {  $, ) }  // See 1st production rule  
+FOLLOW(E)  = { $ , ) }   // Observe que ')' está lá por causa da regra 3 (a propagação de FOLLOW(E) através do E' não terminal) '
+FOLLOW(E’) = FOLLOW(E) = {  $, ) }  //  Veja a 1ª regra de produção 
 FOLLOW(T)  = { FIRST(E’) – Є } U FOLLOW(E’) U FOLLOW(E) = { + , $ , ) }  
 FOLLOW(T’) = FOLLOW(T) =      { + , $ , ) }  
 FOLLOW(F)  = { FIRST(T’) –  Є } U FOLLOW(T’) U FOLLOW(T) = { *, +, $, ) }
