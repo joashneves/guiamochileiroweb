@@ -36,11 +36,13 @@ dg-publish: true
 - Como o reconhecimento é, geralmente, acompanhado da execução de ações semânticas (por exemplo, armazenamento de identificadores na Tabela de Símbolos), a ocorrência de retrocesso pode levar o analisador sintático a ter que desfazer essas ações.
 - Outra desvantagem dessa classe de analisadores é que, quando ocorre um erro, fica difícil indicar com precisão o local do erro, devido à tentativa de aplicação de produções alternativas.
 # Conjunto FIRST
+[[First e follow]]
 Se α é uma forma sentencial (sequência de símbolos da gramática), então FIRST(α) é o conjunto de terminais que iniciam formas sentenciais derivadas a partir de α. Se α →* ε então a palavra vazia também faz parte do conjunto:
 - **Se x é terminal**, então FIRST(x) = {x}.
 - **Se X → ε é uma produção**, então adicione ε a FIRST(X).
 - **Se X → Y₁Y₂ ...Yk é uma produção e,** para algum i, todos Y₁ , Y₂ , ..., Yᵢ-₁ derivam ε, então FIRST(Yᵢ) está em FIRST(X), juntamente com todos os símbolos não ε de FIRST(Y₁), FIRST(Y₂ ), ..., FIRST(Yᵢ-₁). O símbolo ε será adicionado a FIRST(X) apenas se todo Yj (j=1, 2, ..., k) derivar ε.
 # Conjunto FOLLOW
+[[First e follow]]
 A função FOLLOW é definida para símbolos não-terminais.
 - Conjunto que indica quais símbolos terminais que podem aparecer imediatamente após ou à direita de um não terminal.
 - Se E é o símbolo de partida da gramática e $ o marcador de fim da entrada, acrescente $ no Follow(E)
