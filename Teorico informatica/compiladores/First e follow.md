@@ -1,3 +1,6 @@
+---
+dg-publish: true
+---
 - **Conjunto FIRST:** O FIRST conjunto de um não terminal contém todos os símbolos terminais que podem aparecer no início de qualquer string derivada desse não terminal. Em outras palavras, ele nos diz quais símbolos terminais são possíveis ao expandir um não terminal.
 - **Conjunto FOLLOW:** O conjunto FOLLOW de um não terminal contém todos os símbolos terminais que podem aparecer imediatamente após esse não terminal em qualquer derivação. Ele ajuda a identificar o que pode seguir um não terminal na gramática e é essencial para lidar com produções em que um não terminal está no final de uma regra.
 # FIRST(X)
@@ -96,3 +99,143 @@ Exemplo:
 > `A → B X`
 ```
 Aqui, tudo em FOLLOW(A) também deve ser incluído em FOLLOW(X).
+
+# FIRST conjunto na analise de sintaxe
+O conjunto FIRST é usado na análise sintática para identificar quais símbolos terminais podem aparecer no início de strings derivadas de um não terminal. É crucial para analisadores LL e LR, ajudando-os a decidir quais regras aplicar.
+
+Para calcular o PRIMEIRO conjunto:
+
+1. Adicione o próprio terminal ao PRIMEIRO conjunto para todos os terminais.
+2. Para não terminais, adicione o PRIMEIRO terminal do lado direito de suas produções.
+3. Repita até que não seja possível adicionar mais símbolos.
+
+Em analisadores LL, se o próximo símbolo de entrada corresponder ao PRIMEIRO conjunto de um não terminal, essa regra pode ser aplicada com segurança. O PRIMEIRO conjunto também é usado no cálculo do conjunto SEGUINTE, que identifica o que pode vir imediatamente após um não terminal em uma gramática.
+
+## Regras para calcular o FIRST conjunto
+1. Se x for um terminal, então FIRST(x) = { 'x' }
+2. Se x-> ε for uma regra de produção, então adicione ε a FIRST(x).
+3. Se X->Y1 Y2 Y3….Yn é uma produção,   
+    1. PRIMEIRO(X) = PRIMEIRO(Y1)
+    2. Se FIRST(Y1) contém ε então FIRST(X) = { FIRST(Y1) – ε } U { FIRST(Y2) }
+    3. Se FIRST(Yi) contiver ε para todos os i = 1 a n, então adicione ε a FIRST(X).
+Exemplo :
+```bash
+Regras de produção da gramática
+E  -> TE’  
+E’ -> +T E’| ε  
+T  -> F T’  
+T’ -> *F T’ |  ε  
+F  -> (E) | id  
+  
+FIRST sets
+FIRST(E) = FIRST(T) = { ( , id }  
+FIRST(E’) = { +, ε}  
+FIRST(T) = FIRST(F) = { ( , id }  
+FIRST(T’) = { *, ε }  
+FIRST(F) = { ( , id }
+
+Regras de produção da gramática
+S -> ACB | Cbb | Ba  
+A -> da | BC  
+B -> g | ε  
+C -> h | ε  
+  
+FIRST sets
+FIRST(S) = FIRST(ACB) U FIRST(Cbb) U FIRST(Ba)  
+         = { d, g, h, b, a,  ε}  
+FIRST(A) = { d } U FIRST(BC)   
+         = { d, g, h,  ε }  
+FIRST(B) = { g ,  ε }  
+FIRST(C) = { h ,  ε }
+```
+> 1. A gramática usada acima é a Gramática Livre de Contexto ( [CFG](https://www-geeksforgeeks-org.translate.goog/what-is-context-free-grammar/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc)). A sintaxe da maioria das linguagens de programação pode ser especificada usando CFG.
+> 2. CFG é do formato A -> B, onde A é um único Não-Terminal e B pode ser um conjunto de símbolos gramaticais (ou seja, Terminais e Não-Terminais)
+
+# Conjunto FOLLOW na Análise de Sintaxe
+O conjunto FOLLOW na Análise de Sintaxe é um grupo de símbolos que pode vir logo após um não terminal em uma gramática. Ele ajuda os analisadores a descobrir o que deve aparecer em seguida na entrada enquanto verificam se a gramática está correta. O conjunto FOLLOW é importante para a construção de tabelas de análise, especialmente em analisadores LL(1), que o utilizam para decidir como processar regras durante a verificação de sintaxe.  
+Por exemplo, se você estiver analisando uma frase em uma linguagem de programação, o conjunto FOLLOW informa ao analisador quais símbolos válidos podem seguir uma regra ou variável específica. Ele também inclui o símbolo de fim de entrada ( `$`) para mostrar quando a string de entrada termina. Isso torna o conjunto FOLLOW uma ferramenta essencial na criação de analisadores confiáveis ​​para linguagens de programação.
+
+## Regras para calcular o conjunto FOLLOW: 
+1) FOLLOW(S) = { $ } // onde S é o Não Terminal inicial  
+  
+2) Se A -> pBq for uma produção, onde p, B e q são quaisquer símbolos gramaticais,  
+então tudo em FIRST(q) exceto Є está em FOLLOW(B).  
+  
+3) Se A->pB for uma produção, então tudo em FOLLOW(A) está em FOLLOW(B).  
+  
+4) Se A->pBq for uma produção e FIRST(q) contiver Є,  
+então FOLLOW(B) contém { FIRST(q) – Є } U FOLLOW(A)
+
+Exemplo :
+```bash
+Regras de produção
+E -> TE’  
+E’ -> +T E’|Є  
+T -> F T’  
+T’ -> *F T’ | Є  
+F -> (E) | id  
+  
+FIRST set  
+FIRST(E) = FIRST(T) = { ( , id }  
+FIRST(E’) = { +, Є }  
+FIRST(T) = FIRST(F) = { ( , id }  
+FIRST(T’) = { *, Є }  
+FIRST(F) = { ( , id }  
+  
+FOLLOW Set
+FOLLOW(E)  = { $ , ) }  // Note  ')' is there because of rule 3 (the propagation of FOLLOW(E) through the non-terminal E’)  
+FOLLOW(E’) = FOLLOW(E) = {  $, ) }  // See 1st production rule  
+FOLLOW(T)  = { FIRST(E’) – Є } U FOLLOW(E’) U FOLLOW(E) = { + , $ , ) }  
+FOLLOW(T’) = FOLLOW(T) =      { + , $ , ) }  
+FOLLOW(F)  = { FIRST(T’) –  Є } U FOLLOW(T’) U FOLLOW(T) = { *, +, $, ) }
+
+// Exemplo 2 :
+Production Rules:
+S -> aBDh  
+B -> cC  
+C -> bC | Є  
+D -> EF  
+E -> g | Є  
+F -> f | Є  
+  
+FIRST set
+FIRST(S) = { a }  
+FIRST(B) = { c }  
+FIRST(C) = { b , Є }  
+FIRST(D) = FIRST(E) U FIRST(F) = { g, f, Є }  
+FIRST(E) = { g , Є }  
+FIRST(F) = { f , Є }  
+  
+FOLLOW Set
+FOLLOW(S) = { $ }   
+FOLLOW(B) = { FIRST(D) – Є } U FIRST(h) = { g , f , h }  
+FOLLOW(C) = FOLLOW(B) = { g , f , h }  
+FOLLOW(D) = FIRST(h) = { h }  
+FOLLOW(E) = { FIRST(F) – Є } U FOLLOW(D) = { f , h }  
+FOLLOW(F) = FOLLOW(D) = { h }
+
+// Exemplo 3 :
+Production Rules:
+S -> ACB|Cbb|Ba  
+A -> da|BC  
+B-> g|Є  
+C-> h| Є  
+  
+FIRST set 
+FIRST(S) = FIRST(A) U FIRST(B) U FIRST(C) = { d, g, h, Є, b, a}  
+FIRST(A) = { d } U {FIRST(B)-Є} U FIRST(C) = { d, g, h, Є }  
+FIRST(B) = { g, Є }  
+FIRST(C) = { h, Є }  
+  
+FOLLOW Set
+FOLLOW(S) = { $ }  
+FOLLOW(A)  = { h, g, $ }  
+FOLLOW(B) = { a, $, h, g }  
+FOLLOW(C) = { b, g, $, h }
+
+```
+
+> 1. Є como FOLLOW não significa nada (Є é uma string vazia).
+> 2. $ é chamado de marcador final, que representa o fim da string de entrada, sendo, portanto, usado durante a análise para indicar que a string de entrada foi completamente processada.
+> 3. A gramática usada acima é [a Gramática Livre de Contexto](https://www-geeksforgeeks-org.translate.goog/what-is-context-free-grammar/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc) (CFG). A sintaxe de uma linguagem de programação pode ser especificada usando CFG.
+> 4. CFG é do formato A -> B, onde A é um único Não-Terminal e B pode ser um conjunto de símbolos gramaticais. (ou seja, Terminais e Não-Terminais)
